@@ -1,4 +1,7 @@
 <?php
+// Evitar cualquier output antes del JSON
+ob_start();
+
 require_once __DIR__ . '/../config/config.php';
 require_once __DIR__ . '/../models/Albaran.php';
 require_once __DIR__ . '/../models/AlbaranArticulo.php';
@@ -9,6 +12,8 @@ require_once __DIR__ . '/../models/Articulo.php';
 
 requireLogin();
 
+// Limpiar cualquier output buffering y establecer header
+ob_clean();
 header('Content-Type: application/json');
 
 $action = $_GET['action'] ?? $_POST['action'] ?? '';
@@ -26,7 +31,7 @@ switch ($action) {
         $offset = ($pagina - 1) * $limite;
         
         $filtros = [
-            'busqueda' => $_GET['busqueda'] ?? '',
+            'search' => $_GET['busqueda'] ?? '',
             'cliente_id' => $_GET['cliente_id'] ?? '',
             'comercial_id' => $_GET['comercial_id'] ?? '',
             'mozo_id' => $_GET['mozo_id'] ?? '',
@@ -37,12 +42,12 @@ switch ($action) {
             'offset' => $offset
         ];
         
-        $resultado = $albaranModel->listar($filtros);
-        $total = $albaranModel->contar($filtros);
+        $albaranes = $albaranModel->listar($filtros);
+        $total = count($albaranes); // Por ahora, retornamos el count del array
         
         echo json_encode([
             'success' => true,
-            'albaranes' => $resultado['albaranes'] ?? [],
+            'albaranes' => $albaranes,
             'total' => $total,
             'pagina_actual' => $pagina
         ]);
@@ -250,34 +255,34 @@ switch ($action) {
         break;
         
     case 'listar_clientes':
-        $resultado = $clienteModel->listar(['activo' => 1]);
+        $clientes = $clienteModel->listar(['activo' => 1]);
         echo json_encode([
             'success' => true,
-            'clientes' => $resultado['clientes'] ?? []
+            'clientes' => $clientes
         ]);
         break;
         
     case 'listar_comerciales':
-        $resultado = $comercialModel->listar(['activo' => 1]);
+        $comerciales = $comercialModel->listar(['activo' => 1]);
         echo json_encode([
             'success' => true,
-            'comerciales' => $resultado['comerciales'] ?? []
+            'comerciales' => $comerciales
         ]);
         break;
         
     case 'listar_mozos':
-        $resultado = $mozoModel->listar(['activo' => 1]);
+        $mozos = $mozoModel->listar(['activo' => 1]);
         echo json_encode([
             'success' => true,
-            'mozos' => $resultado['mozos'] ?? []
+            'mozos' => $mozos
         ]);
         break;
         
     case 'listar_articulos':
-        $resultado = $articuloModel->listar(['activo' => 1]);
+        $articulos = $articuloModel->listar(['activo' => 1]);
         echo json_encode([
             'success' => true,
-            'articulos' => $resultado['articulos'] ?? []
+            'articulos' => $articulos
         ]);
         break;
         

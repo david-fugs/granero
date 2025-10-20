@@ -1,11 +1,11 @@
 RewriteEngine On
-RewriteBase /granero/
+RewriteBase /frapont_cp/
 
 # Prevenir acceso directo a carpetas sensibles
 RewriteRule ^(config|database)/ - [F,L]
 
 # Redirigir errores 404
-ErrorDocument 404 /granero/views/404.php
+ErrorDocument 404 /frapont_cp/views/404.php
 
 # Configuración de seguridad
 <FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql)$">

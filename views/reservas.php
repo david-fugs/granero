@@ -90,8 +90,8 @@ if (!hasPermission('reservas')) {
 </div>
 
 <!-- Modal Reserva -->
-<div class="modal" id="modalReserva">
-    <div class="modal-content modal-lg">
+<div class="modal-overlay" id="modalReserva">
+    <div class="modal">
         <div class="modal-header">
             <h3 id="modalReservaTitle">Nueva Reserva</h3>
             <button class="modal-close" onclick="closeModal('modalReserva')">&times;</button>

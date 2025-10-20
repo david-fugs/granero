@@ -90,8 +90,8 @@ if (!hasPermission('albaranes')) {
 </div>
 
 <!-- Modal Albarán -->
-<div class="modal" id="modalAlbaran">
-    <div class="modal-content modal-xl">
+<div class="modal-overlay" id="modalAlbaran">
+    <div class="modal modal-xl">
         <div class="modal-header">
             <h3 id="modalAlbaranTitle">Nuevo Albarán</h3>
             <button class="modal-close" onclick="closeModal('modalAlbaran')">&times;</button>
@@ -250,8 +250,8 @@ if (!hasPermission('albaranes')) {
 </div>
 
 <!-- Modal Línea de Artículo -->
-<div class="modal" id="modalLineaArticulo">
-    <div class="modal-content">
+<div class="modal-overlay" id="modalLineaArticulo">
+    <div class="modal">
         <div class="modal-header">
             <h3 id="modalLineaTitle">Agregar Artículo</h3>
             <button class="modal-close" onclick="closeModal('modalLineaArticulo')">&times;</button>
@@ -381,16 +381,6 @@ if (!hasPermission('albaranes')) {
     cursor: pointer;
 }
 </style>
-
-<script src="../assets/js/albaranes.js"></script>
-<?php include __DIR__ . '/layouts/footer.php'; ?>
-                        <td colspan="8" class="text-center">Próximamente...</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
 
 <script src="../assets/js/albaranes.js"></script>
 <?php include __DIR__ . '/layouts/footer.php'; ?>

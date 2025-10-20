@@ -80,8 +80,8 @@ if (!hasPermission('movimientos')) {
 </div>
 
 <!-- Modal Movimiento -->
-<div class="modal" id="modalMovimiento">
-    <div class="modal-content">
+<div class="modal-overlay" id="modalMovimiento">
+    <div class="modal">
         <div class="modal-header">
             <h3 id="modalMovimientoTitle">Nuevo Movimiento de Stock</h3>
             <button class="modal-close" onclick="closeModal('modalMovimiento')">&times;</button>

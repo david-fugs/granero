@@ -70,8 +70,8 @@ if (!hasPermission('mozos')) {
 </div>
 
 <!-- Modal Mozo -->
-<div class="modal" id="modalMozo">
-    <div class="modal-content">
+<div class="modal-overlay" id="modalMozo">
+    <div class="modal">
         <div class="modal-header">
             <h3 id="modalMozoTitle">Nuevo Mozo</h3>
             <button class="modal-close" onclick="closeModal('modalMozo')">&times;</button>

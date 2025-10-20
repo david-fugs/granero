@@ -78,8 +78,8 @@ if (!hasPermission('stock')) {
 </div>
 
 <!-- Modal Artículo -->
-<div class="modal" id="modalArticulo">
-    <div class="modal-content">
+<div class="modal-overlay" id="modalArticulo">
+    <div class="modal">
         <div class="modal-header">
             <h3 id="modalArticuloTitle">Nuevo Artículo</h3>
             <button class="modal-close" onclick="closeModal('modalArticulo')">&times;</button>

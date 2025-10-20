@@ -70,8 +70,8 @@ if (!hasPermission('comerciales')) {
 </div>
 
 <!-- Modal Comercial -->
-<div class="modal" id="modalComercial">
-    <div class="modal-content">
+<div class="modal-overlay" id="modalComercial">
+    <div class="modal">
         <div class="modal-header">
             <h3 id="modalComercialTitle">Nuevo Comercial</h3>
             <button class="modal-close" onclick="closeModal('modalComercial')">&times;</button>

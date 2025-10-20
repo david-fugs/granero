@@ -2,11 +2,11 @@
  * JavaScript para Albaranes con Gestión de Líneas
  */
 
-let paginaActual = 1;
-let totalPaginas = 1;
-let estadoActual = 'pendiente';
-let albaranEditando = null;
-let lineasArticulos = [];
+var paginaActual = 1;
+var totalPaginas = 1;
+var estadoActual = 'pendiente';
+var albaranEditando = null;
+var lineasArticulos = [];
 
 document.addEventListener('DOMContentLoaded', function() {
     cargarAlbaranes();

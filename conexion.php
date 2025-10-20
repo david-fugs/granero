@@ -1,13 +1,13 @@
 <?php
 // Configuración de la base de datos
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'granero');
+define('DB_NAME', 'controlpresencia_cp');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_CHARSET', 'utf8mb4');
 
 // Configuración de la aplicación
-define('BASE_URL', 'http://localhost/granero/');
+define('BASE_URL', 'http://controlpresencia/');
 define('SITE_NAME', 'Granero - Control de Inventario');
 
 class Database {
@@ -39,5 +39,3 @@ class Database {
         return $this->connection;
     }
 }
-?>
-    

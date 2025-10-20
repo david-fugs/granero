@@ -80,8 +80,8 @@ if (!hasPermission('usuarios')) {
 </div>
 
 <!-- Modal Usuario -->
-<div class="modal" id="modalUsuario">
-    <div class="modal-content">
+<div class="modal-overlay" id="modalUsuario">
+    <div class="modal">
         <div class="modal-header">
             <h3 id="modalUsuarioTitle">Nuevo Usuario</h3>
             <button class="modal-close" onclick="closeModal('modalUsuario')">&times;</button>

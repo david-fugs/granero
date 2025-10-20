@@ -3,13 +3,15 @@
  * JavaScript Principal - Mobile First
  */
 
-// Configuración global
-const Config = {
-    baseUrl: 'http://localhost/granero/',
-    apiUrl: 'http://localhost/granero/controllers/',
-    itemsPerPage: 25,
-    dateFormat: 'DD/MM/YYYY'
-};
+// Configuración global (solo si no existe ya)
+if (typeof Config === 'undefined') {
+    var Config = {
+        baseUrl: 'http://localhost/frapont_cp/',
+        apiUrl: 'http://localhost/frapont_cp/controllers/',
+        itemsPerPage: 25,
+        dateFormat: 'DD/MM/YYYY'
+    };
+}
 
 // ==================== SIDEBAR & MENU ====================
 document.addEventListener('DOMContentLoaded', function() {

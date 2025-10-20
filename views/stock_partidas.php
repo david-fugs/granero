@@ -83,8 +83,8 @@ if (!hasPermission('stock')) {
 </div>
 
 <!-- Modal Partida -->
-<div class="modal" id="modalPartida">
-    <div class="modal-content">
+<div class="modal-overlay" id="modalPartida">
+    <div class="modal">
         <div class="modal-header">
             <h3 id="modalPartidaTitle">Nueva Partida</h3>
             <button class="modal-close" onclick="closeModal('modalPartida')">&times;</button>
